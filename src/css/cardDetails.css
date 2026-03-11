@@ -1,0 +1,154 @@
+/* Main wrapper */
+.details-container {
+  min-height: 100vh;
+  padding: 50px 20px;
+  background: linear-gradient(135deg, #1f1f2e, #2e2e4d);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Card box */
+.details-card {
+  position: relative;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 40px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.details-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Title */
+.details-title {
+  font-size: 2rem;
+  margin-bottom: 25px;
+}
+
+/* Character image */
+.details-image {
+  margin: 20px 0;
+  border-radius: 12px;
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Info text */
+.details-info {
+  margin: 10px 0;
+  font-size: 1.1rem;
+}
+
+/* Button */
+.details-button {
+  margin-top: 25px;
+  margin-left: 25px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  background-color: #6c63ff;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.details-button:hover {
+  background-color: #4e47d1;
+}
+
+.stars-container {
+  margin-left: 8px;
+  color: #f1c40f; /* Gold color */
+  font-size: 1.2rem;
+  text-shadow: 0 0 5px rgba(241, 196, 15, 0.5);
+}
+
+.star-icon {
+  margin-right: 2px;
+}
+
+/* The Q Circle */
+.ultimate-trigger {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 30px;
+  height: 30px;
+  background: rgba(108, 99, 255, 0.8);
+  border: 2px solid white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  cursor: help;
+  transition: 0.3s;
+  z-index: 10;
+}
+
+.ultimate-trigger:hover {
+  background: white;
+  color: #6c63ff;
+  transform: scale(1.1);
+}
+
+/* The E Circle */
+.skill-trigger {
+  position: absolute;
+  top: 15px;
+  right: 55px;
+  width: 30px;
+  height: 30px;
+  background: rgba(108, 99, 255, 0.8);
+  border: 2px solid white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  cursor: help;
+  transition: 0.3s;
+  z-index: 10;
+}
+
+.skill-trigger:hover {
+  background: white;
+  color: #6c63ff;
+  transform: scale(1.1);
+}
+
+/* The Popup Box */
+.ultimate-popup {
+  position: absolute;
+
+  right: -350px;
+  width: 300px;
+  background: #000;
+  border: 3px solid #6c63ff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+  animation: fadeIn 0.3s ease;
+  z-index: 20;
+}
+
+.ultimate-popup img {
+  width: 100%;
+  display: block;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}

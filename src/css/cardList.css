@@ -1,0 +1,25 @@
+/* Main container */
+.caracter-container {
+  padding: 40px 20px;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1e1e2f, #2b2b45);
+  color: white;
+}
+
+/* Title */
+.caracter-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+
+/* Cards wrapper */
+.caracter-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 25px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
