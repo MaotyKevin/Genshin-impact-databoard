@@ -4,6 +4,9 @@ import benett from '../assets/Bennett_Icon.webp'
 
 import arlecchinoVideo from '../assets/arlecchino-genshin-impact.gif'
 import arlecchinoSkillVideo from '../assets/arlecchino-skill.gif'
+
+import neuvilletteVideo from '../assets/neuvillette-burst.gif'
+
 export const caractersProfiles = [
    {
     id: 1,
@@ -29,7 +32,7 @@ export const caractersProfiles = [
       type: 'hydro damage dealer',
       picture: neuvillette,
       rarity: '5',
-      ultimateVideo: 'https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExNHJueHBsZzR0bXN6ZzR0ZzR0ZzR0ZzR0ZzR0ZzR0ZzR0JmImVwaWNfcmVhbHRpbWUiOnRydWV9/3o7TKMGpxxX5F3Pwqc/giphy.gif',
-      skillVideo: 'https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExNHJueHBsZzR0bXN6ZzR0ZzR0ZzR0ZzR0ZzR0ZzR0ZzR0JmImVwaWNfcmVhbHRpbWUiOnRydWV9/3o7TKMGpxxX5F3Pwqc/giphy.gif'
+      ultimateVideo: neuvilletteVideo,
+      skillVideo: neuvilletteVideo
    },
 ]

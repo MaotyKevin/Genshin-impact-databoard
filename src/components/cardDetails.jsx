@@ -44,6 +44,14 @@ export default function CardDetails() {
 
    return (
       <div className="details-container">
+
+      <div className="left-part">
+      
+      <p>LEFT PART</p>
+
+      </div>
+
+
          <div className="details-card">
             <div className="ability-controls">
 
@@ -119,6 +127,13 @@ export default function CardDetails() {
             </button>
          </div>
       </div>
+
+      <div className="right-part">
+      
+      <p>RIGHT PART</p>
+
+      </div>
+
       </div>
    );
 }
