@@ -11,7 +11,7 @@ export const caractersProfiles = [
    {
     id: 1,
       name: 'arlecchino',
-      type: 'pyro damage dealer',
+      type: 'pyro',
       picture: arlecchino,
       rarity: '5',
       ultimateVideo: arlecchinoVideo,
@@ -20,7 +20,7 @@ export const caractersProfiles = [
    {
       id: 2,
       name: 'benett',
-      type: 'support',
+      type: 'pyro',
       picture: benett,
       rarity: '4',
       ultimateVideo: 'https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExNHJueHBsZzR0bXN6ZzR0ZzR0ZzR0ZzR0ZzR0ZzR0ZzR0JmImVwaWNfcmVhbHRpbWUiOnRydWV9/3o7TKMGpxxX5F3Pwqc/giphy.gif',
@@ -29,7 +29,7 @@ export const caractersProfiles = [
    {   
     id: 3,
       name: 'neuvillette',
-      type: 'hydro damage dealer',
+      type: 'hydro',
       picture: neuvillette,
       rarity: '5',
       ultimateVideo: neuvilletteVideo,

@@ -23,3 +23,33 @@
   max-width: 1200px;
   margin: 0 auto;
 }
+
+.filter-group {
+   display: flex;
+   justify-content: center;
+   gap: 15px;
+   margin-bottom: 30px;
+   flex-wrap: wrap;
+}
+
+.filter-btn {
+   /*padding: 10px 20px;*/
+   border: none;
+   /*border-radius: 20px;*/
+    background: #222235; /* Light parchment color */
+   cursor: pointer;
+   transition: all 0.3s ease;
+   font-weight: bold;
+   color: whitesmoke;
+}
+
+.filter-btn.active {
+  border-bottom: whitesmoke 1px solid;
+   color: white;
+   transform: scale(1.1);
+}
+
+.filter-btn:hover {
+   /*background: #d3bc8e; /* Genshin gold */
+   border-bottom: whitesmoke 1px solid;
+}
