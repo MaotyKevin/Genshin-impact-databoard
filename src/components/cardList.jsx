@@ -69,7 +69,9 @@ export default function Caracter() {
                   type={profile.type}
                   rarity={profile.rarity}
                   ultimateVideo={profile.ultimateVideo}
-                  skillVideo={profile.skillVideo}
+                  skillVideo={profile.skillVideo} 
+                  idleAnimation1={profile.idleAnimation1}
+                  idleAnimation2={profile.idleAnimation2}
                />
             ))}
          </div>

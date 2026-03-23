@@ -129,10 +129,81 @@
   transform: scale(1.1);
 }
 
+.idle1-trigger {
+  position: absolute;
+  top: 15px;
+  right: 135px;
+  width: 30px;
+  height: 30px;
+  background: rgba(108, 99, 255, 0.8);
+  border: 2px solid white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  cursor: help;
+  transition: 0.3s;
+  z-index: 10;
+}
+
+.idle1-trigger:hover {
+  background: white;
+  color: #6c63ff;
+  transform: scale(1.1);
+}
+
+.idle2-trigger {
+  position: absolute;
+  top: 15px;
+  right: 95px;
+  width: 30px;
+  height: 30px;
+  background: rgba(108, 99, 255, 0.8);
+  border: 2px solid white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  cursor: help;
+  transition: 0.3s;
+  z-index: 10;
+}
+
+.idle2-trigger:hover {
+  background: white;
+  color: #6c63ff;
+  transform: scale(1.1);
+}
+
+.constellation-trigger {
+  position: absolute;
+  top: 15px;
+  right: 175px;
+  width: 30px;
+  height: 30px;
+  background: rgba(108, 99, 255, 0.8);
+  border: 2px solid white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  cursor: help;
+  transition: 0.3s;
+  z-index: 10;
+}
+
+.constellation-trigger:hover {
+  background: white;
+  color: #6c63ff;
+  transform: scale(1.1);
+}
+
 /* The Popup Box */
 .ultimate-popup {
   position: absolute;
-
   right: -350px;
   width: 300px;
   background: #000;

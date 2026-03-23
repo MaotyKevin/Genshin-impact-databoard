@@ -4,8 +4,12 @@ import benett from '../assets/Bennett_Icon.webp'
 
 import arlecchinoVideo from '../assets/arlecchino-genshin-impact.gif'
 import arlecchinoSkillVideo from '../assets/arlecchino-skill.gif'
+import arlecchinoIdle1 from '../assets/arlecchino-idle1.gif'
+import arlecchinoIdle2 from '../assets/arlecchino-idle2.gif'
 
 import neuvilletteVideo from '../assets/neuvillette-burst.gif'
+
+
 
 export const caractersProfiles = [
    {
@@ -15,7 +19,9 @@ export const caractersProfiles = [
       picture: arlecchino,
       rarity: '5',
       ultimateVideo: arlecchinoVideo,
-      skillVideo: arlecchinoSkillVideo
+      skillVideo: arlecchinoSkillVideo,
+      idleAnimation1: arlecchinoIdle1,
+      idleAnimation2: arlecchinoIdle2
    },
    {
       id: 2,
@@ -24,7 +30,9 @@ export const caractersProfiles = [
       picture: benett,
       rarity: '4',
       ultimateVideo: 'https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExNHJueHBsZzR0bXN6ZzR0ZzR0ZzR0ZzR0ZzR0ZzR0ZzR0JmImVwaWNfcmVhbHRpbWUiOnRydWV9/3o7TKMGpxxX5F3Pwqc/giphy.gif',
-      skillVideo: 'https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExNHJueHBsZzR0bXN6ZzR0ZzR0ZzR0ZzR0ZzR0ZzR0ZzR0JmImVwaWNfcmVhbHRpbWUiOnRydWV9/3o7TKMGpxxX5F3Pwqc/giphy.gif'
+      skillVideo: 'https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExNHJueHBsZzR0bXN6ZzR0ZzR0ZzR0ZzR0ZzR0ZzR0ZzR0JmImVwaWNfcmVhbHRpbWUiOnRydWV9/3o7TKMGpxxX5F3Pwqc/giphy.gif',
+      idleAnimation1: 'https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExNHJueHBsZzR0bXN6ZzR0ZzR0ZzR0ZzR0ZzR0ZzR0ZzR0JmImVwaWNfcmVhbHRpbWUiOnRydWV9/3o7TKMGpxxX5F3Pwqc/giphy.gif',
+      idleAnimation2: 'https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExNHJueHBsZzR0bXN6ZzR0ZzR0ZzR0ZzR0ZzR0ZzR0ZzR0JmImVwaWNfcmVhbHRpbWUiOnRydWV9/3o7TKMGpxxX5F3Pwqc/giphy.gif'
    },
    {   
     id: 3,
@@ -33,6 +41,8 @@ export const caractersProfiles = [
       picture: neuvillette,
       rarity: '5',
       ultimateVideo: neuvilletteVideo,
-      skillVideo: neuvilletteVideo
+      skillVideo: neuvilletteVideo,
+      idleAnimation1: neuvilletteVideo,
+      idleAnimation2: neuvilletteVideo
    },
 ]

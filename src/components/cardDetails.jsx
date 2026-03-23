@@ -8,10 +8,13 @@ export default function CardDetails() {
    const location = useLocation();
    const navigate = useNavigate();
 
-   const { name, type, rarity, picture, ultimateVideo , skillVideo} = location.state || {};
+   const { name, type, rarity, picture, ultimateVideo , skillVideo, idleAnimation1, idleAnimation2 } = location.state || {};
 
    const [showUltimate, setShowUltimate] = useState(false);
    const [showSkill, setShowSkill] = useState(false);
+   const [showIdleAnimation1 , setShowIdleAnimation1] = useState(false);
+   const [showIdleAnimation2 , setShowIdleAnimation2] = useState(false);
+   const [showConstellation, setShowConstellation] = useState(false);
    
 
 // Helper function to render stars
@@ -55,14 +58,30 @@ export default function CardDetails() {
          <div className="details-card">
             <div className="ability-controls">
 
-{/* The Q Button */}
-            <div 
-               className="ultimate-trigger"
-               onMouseEnter={() => setShowUltimate(true)}
-               onMouseLeave={() => setShowUltimate(false)}
-            >
-               Q
-            </div>
+               {/* Constellation Triggers */}
+               <div 
+                  className="constellation-trigger"
+                  onMouseEnter={() => setShowConstellation(true)}
+                  onMouseLeave={() => setShowConstellation(false)}
+               >
+                  C
+               </div>
+
+               {/* Idle Animation1 Triggers */}
+               <div 
+                  className="idle1-trigger"
+                  onMouseEnter={() => setShowIdleAnimation1(true)}
+                  onMouseLeave={() => setShowIdleAnimation1(false)}
+               >1
+               </div>
+               
+               {/* Idle Animation2 Triggers */}
+               <div 
+                  className="idle2-trigger"
+                  onMouseEnter={() => setShowIdleAnimation2(true)}
+                  onMouseLeave={() => setShowIdleAnimation2(false)}
+               >2
+               </div>
 
 {/* The E Button */}
             <div 
@@ -73,9 +92,60 @@ export default function CardDetails() {
                E
             </div>
 
+{/* The Q Button */}
+            <div 
+               className="ultimate-trigger"
+               onMouseEnter={() => setShowUltimate(true)}
+               onMouseLeave={() => setShowUltimate(false)}
+            >
+               Q
+            </div>
+
+            {/* The Idle1 Animation Popup */}
+            {showIdleAnimation1 && (
+               <div className="ultimate-popup">
+                  <img 
+                     src={idleAnimation1} 
+                     alt="Idle Animation 1" 
+                  />
+               </div>
+            )}
+
+            {/* The Idle2 Animation Popup */}
+            {showIdleAnimation2 && (
+               <div className="ultimate-popup">
+                  <img 
+                     src={idleAnimation2} 
+                     alt="Idle Animation 2" 
+                  />
+               </div>
+            )}
+
+            {/* The Constellation Popup */}
+            {showConstellation && (
+               <div className="ultimate-popup">
+                  <div>
+                     <h3>Constellation</h3>
+                     <p>Hovering over the "Cons" button shows this video/GIF.</p>
+                     <p>It demonstrates the character's constellation effects.</p>
+                  </div>
+                  <img 
+                     src={ultimateVideo} 
+                     alt="Constellation" 
+                  />
+               </div>
+            )}
+
+
+
             {/* The Popup Video/GIF */}
             {showUltimate && (
                <div className="ultimate-popup">
+                  <div>
+                     <h3>Ultimate Ability</h3>
+                     <p>Hovering over the "Q" button shows this video/GIF.</p>
+                     <p>It demonstrates the character's ultimate ability in action.</p>
+                  </div>
                   <img 
                      src={ultimateVideo} 
                      alt="Ultimate Ability" 
