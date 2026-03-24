@@ -8,7 +8,7 @@ export default function CardDetails() {
    const location = useLocation();
    const navigate = useNavigate();
 
-   const { name, type, rarity, picture, ultimateVideo , skillVideo, idleAnimation1, idleAnimation2 } = location.state || {};
+   const { name, type, rarity, picture, ultimateVideo , skillVideo, idleAnimation1, idleAnimation2 , constellation , skill} = location.state || {};
 
    const [showUltimate, setShowUltimate] = useState(false);
    const [showSkill, setShowSkill] = useState(false);
@@ -130,7 +130,7 @@ export default function CardDetails() {
                      <p>It demonstrates the character's constellation effects.</p>
                   </div>
                   <img 
-                     src={ultimateVideo} 
+                     src={constellation} 
                      alt="Constellation" 
                   />
                </div>
@@ -156,6 +156,32 @@ export default function CardDetails() {
                         {/* The Popup Video/GIF */}
             {showSkill && (
                <div className="ultimate-popup">
+
+                 
+
+                  <div className="skill-card">
+                        {/* Main Header */}
+                        <h2 className="skill-main-title">{skill.title}</h2>
+                        
+                        {/* Intro Text */}
+                        <p className="skill-intro">{skill.intro}</p>
+
+                        {/* Sub-section (Inspiration Field) */}
+                        <div className="skill-sub-section">
+                        <h3 className="skill-sub-title">{skill.subTitle}</h3>
+                        <ul className="skill-list">
+                           {skill.effects.map((effect, index) => (
+                              <li key={index} className="skill-list-item">
+                              {effect}
+                              </li>
+                           ))}
+                        </ul>
+                        </div>
+                     </div>
+  
+
+                 
+                  
                   <img 
                      src={skillVideo} 
                      alt="Skill Ability" 

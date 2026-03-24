@@ -72,6 +72,8 @@ export default function Caracter() {
                   skillVideo={profile.skillVideo} 
                   idleAnimation1={profile.idleAnimation1}
                   idleAnimation2={profile.idleAnimation2}
+                  constellation={profile.constellation}
+                  skill={profile.skill}
                />
             ))}
          </div>
