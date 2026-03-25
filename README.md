@@ -1,4 +1,5 @@
-# Yōkoso, tabibitoyo :)
+# Yōkoso, tabibitoyo :) <img width="680" height="680" alt="image" src="https://github.com/user-attachments/assets/cd304b50-a70a-401e-a99e-df498ed27d0b" />
+
 
 This project is just a side past time funny one which purpose is to store and manage Genshin Impact game general datas in order to help players (and myself especially) without having to check official in game UI , which is imo could help....
 
