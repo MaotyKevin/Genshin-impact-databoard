@@ -23,3 +23,6 @@ ___________________________________
 ## ⚖️ Disclaimer
 This project is a fan-made application and is not affiliated with or endorsed by **HoYoverse**. 
 All in-game assets, data, and iconography related to **Genshin Impact** are the exclusive property of **HoYoverse (miHoYo Co., Ltd.)**.
+
+## 🎨 Credits
+* **Paimon Image:** Created by [bigsize-pictures](https://www.deviantart.com/bigsize-pictures)] 
