@@ -17,3 +17,9 @@ This project is just a side past time funny one which purpose is to store and ma
 
 
 **Note: since this is still in development,others things surely will be added in future**
+
+___________________________________
+
+## ⚖️ Disclaimer
+This project is a fan-made application and is not affiliated with or endorsed by **HoYoverse**. 
+All in-game assets, data, and iconography related to **Genshin Impact** are the exclusive property of **HoYoverse (miHoYo Co., Ltd.)**.
