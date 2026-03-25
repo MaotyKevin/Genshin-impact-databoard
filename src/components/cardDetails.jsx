@@ -18,7 +18,7 @@ export default function CardDetails() {
 
    if (!id) return <div className="details-container"><h1>Card not found</h1></div>;
 
-   // Configuration for your buttons to keep JSX clean
+   // Configuration for buttons to keep JSX clean
    const controls = [
       { id: 'const', label: 'C', data: constellation, title: 'Constellation' },
       { id: 'idle1', label: '1', data: idleAnimation1, title: 'Idle 1' },
@@ -66,7 +66,7 @@ export default function CardDetails() {
                <button className="details-button" onClick={() => navigate('/')}>Home</button>
             </div>
 
-            {/* RIGHT SIDE: Video/GIF Popups (Relative to the card) */}
+          
             {activeTab && (
                <div className="preview-popup">
                   <img src={controls.find(c => c.id === activeTab)?.data} alt="Preview" />
