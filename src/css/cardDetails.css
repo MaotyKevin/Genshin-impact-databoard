@@ -1,228 +1,227 @@
-/* Main wrapper */
+/* --- Root & Reset --- */
+:root {
+  --primary: #6c63ff;
+  --primary-hover: #4e47d1;
+  --bg-gradient: linear-gradient(135deg, #12121e, #1f1f3a);
+  --card-bg: rgba(255, 255, 255, 0.07);
+  --border-color: rgba(255, 255, 255, 0.1);
+  --text-gold: #f1c40f;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* --- Main Layout --- */
 .details-container {
   min-height: 100vh;
-  padding: 50px 20px;
-  background: linear-gradient(135deg, #1f1f2e, #2e2e4d);
+  padding: 40px;
+  background: var(--bg-gradient);
   color: white;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: 30px; /* Space between Skill Info, Card, and Previews */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  overflow-x: hidden;
 }
 
-/* Card box */
+/* Side Panels for content balance */
+.side-panel {
+  flex: 1;
+  max-width: 350px;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* --- The Central Character Card --- */
 .details-card {
+  flex: 0 0 450px; /* Fixed width for the main card */
   position: relative;
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(10px);
-  border-radius: 16px;
+  background: var(--card-bg);
+  backdrop-filter: blur(15px);
+  border: 1px solid var(--border-color);
+  border-radius: 24px;
   padding: 40px;
-  width: 100%;
-  max-width: 500px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
   text-align: center;
-  transition: transform 0.3s ease;
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .details-card:hover {
-  transform: translateY(-5px);
+  transform: scale(1.02);
+  border-color: var(--primary);
 }
 
-/* Title */
-.details-title {
-  font-size: 2rem;
-  margin-bottom: 25px;
+/* --- Control Buttons (E, Q, 1, 2, C) --- */
+.ability-controls {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  gap: 10px;
+  z-index: 10;
 }
 
-/* Character image */
+.control-trigger {
+  width: 36px;
+  height: 36px;
+  background: rgba(0, 0, 0, 0.5);
+  border: 2px solid var(--primary);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 800;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.control-trigger:hover {
+  background: var(--primary);
+  color: white;
+  box-shadow: 0 0 15px var(--primary);
+  transform: translateY(-3px);
+}
+
+/* --- Image & Stars --- */
 .details-image {
   margin: 20px 0;
-  border-radius: 12px;
-  width: 180px;
-  height: 180px;
+  border-radius: 50%; /* Circular portrait style */
+  width: 220px;
+  height: 220px;
   object-fit: cover;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
-}
-
-/* Info text */
-.details-info {
-  margin: 10px 0;
-  font-size: 1.1rem;
-}
-
-/* Button */
-.details-button {
-  margin-top: 25px;
-  margin-left: 25px;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 8px;
-  background-color: #6c63ff;
-  color: white;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: 0.3s ease;
-}
-
-.details-button:hover {
-  background-color: #4e47d1;
+  border: 4px solid var(--primary);
+  box-shadow: 0 10px 30px rgba(108, 99, 255, 0.3);
 }
 
 .stars-container {
-  margin-left: 8px;
-  color: #f1c40f; /* Gold color */
+  margin-top: 10px;
+  font-size: 1.4rem;
+  color: var(--text-gold);
+}
+
+/* --- Content Typography --- */
+.details-title {
   font-size: 1.2rem;
-  text-shadow: 0 0 5px rgba(241, 196, 15, 0.5);
+  color: var(--primary);
+  letter-spacing: 2px;
+  margin-bottom: 10px;
 }
 
-.star-icon {
-  margin-right: 2px;
+.details-info {
+  font-size: 1.1rem;
+  margin: 8px 0;
+  opacity: 0.9;
 }
 
-/* The Q Circle */
-.ultimate-trigger {
+/* --- Skill Description (Left Side) --- */
+.description-card {
+  background: rgba(0, 0, 0, 0.4);
+  padding: 25px;
+  border-radius: 16px;
+  border-left: 4px solid var(--primary);
+  animation: slideInLeft 0.4s ease-out;
+}
+
+.skill-main-title {
+  color: var(--primary);
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+}
+
+.skill-list {
+  padding-left: 20px;
+  margin-top: 15px;
+}
+
+.skill-list li {
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  color: #ccc;
+}
+
+/* --- Preview Popups (Right Side) --- */
+.preview-popup {
   position: absolute;
-  top: 15px;
-  right: 15px;
-  width: 30px;
-  height: 30px;
-  background: rgba(108, 99, 255, 0.8);
-  border: 2px solid white;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-weight: bold;
-  cursor: help;
-  transition: 0.3s;
-  z-index: 10;
-}
-
-.ultimate-trigger:hover {
-  background: white;
-  color: #6c63ff;
-  transform: scale(1.1);
-}
-
-/* The E Circle */
-.skill-trigger {
-  position: absolute;
-  top: 15px;
-  right: 55px;
-  width: 30px;
-  height: 30px;
-  background: rgba(108, 99, 255, 0.8);
-  border: 2px solid white;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-weight: bold;
-  cursor: help;
-  transition: 0.3s;
-  z-index: 10;
-}
-
-.skill-trigger:hover {
-  background: white;
-  color: #6c63ff;
-  transform: scale(1.1);
-}
-
-.idle1-trigger {
-  position: absolute;
-  top: 15px;
-  right: 135px;
-  width: 30px;
-  height: 30px;
-  background: rgba(108, 99, 255, 0.8);
-  border: 2px solid white;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-weight: bold;
-  cursor: help;
-  transition: 0.3s;
-  z-index: 10;
-}
-
-.idle1-trigger:hover {
-  background: white;
-  color: #6c63ff;
-  transform: scale(1.1);
-}
-
-.idle2-trigger {
-  position: absolute;
-  top: 15px;
-  right: 95px;
-  width: 30px;
-  height: 30px;
-  background: rgba(108, 99, 255, 0.8);
-  border: 2px solid white;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-weight: bold;
-  cursor: help;
-  transition: 0.3s;
-  z-index: 10;
-}
-
-.idle2-trigger:hover {
-  background: white;
-  color: #6c63ff;
-  transform: scale(1.1);
-}
-
-.constellation-trigger {
-  position: absolute;
-  top: 15px;
-  right: 175px;
-  width: 30px;
-  height: 30px;
-  background: rgba(108, 99, 255, 0.8);
-  border: 2px solid white;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-weight: bold;
-  cursor: help;
-  transition: 0.3s;
-  z-index: 10;
-}
-
-.constellation-trigger:hover {
-  background: white;
-  color: #6c63ff;
-  transform: scale(1.1);
-}
-
-/* The Popup Box */
-.ultimate-popup {
-  position: absolute;
-  right: -350px;
-  width: 300px;
+  left: 105%; /* Positions itself to the right of the card */
+  top: 0;
+  width: 350px;
   background: #000;
-  border: 3px solid #6c63ff;
   border-radius: 12px;
+  border: 2px solid var(--primary);
   overflow: hidden;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.5);
-  animation: fadeIn 0.3s ease;
-  z-index: 20;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.8);
+  animation: zoomIn 0.3s ease-out;
 }
 
-.ultimate-popup img {
+.preview-popup img, 
+.preview-popup video {
   width: 100%;
   display: block;
 }
 
+/* --- Buttons --- */
+.button-group {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
 
+.details-button {
+  padding: 10px 24px;
+  border: 1px solid var(--primary);
+  border-radius: 30px;
+  background: transparent;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
 
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
+.details-button:hover {
+  background: var(--primary);
+  box-shadow: 0 5px 15px rgba(108, 99, 255, 0.4);
+}
+
+/* --- Animations --- */
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-30px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes zoomIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 1100px) {
+  .details-container {
+    flex-direction: column;
+    padding: 20px;
+  }
+  
+  .side-panel {
+    max-width: 100%;
+    order: 2;
+  }
+  
+  .details-card {
+    flex: none;
+    width: 100%;
+    max-width: 450px;
+    order: 1;
+  }
+
+  .preview-popup {
+    position: static;
+    width: 100%;
+    margin-top: 20px;
+  }
 }

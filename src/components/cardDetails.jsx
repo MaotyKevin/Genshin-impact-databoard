@@ -1,235 +1,79 @@
-import { useLocation, useNavigate, useParams } from 'react-router-dom';
-import '../css/cardDetails.css';
-import { useState } from 'react';
+import React, { useState } from 'react';
+import { useParams, useLocation, useNavigate } from 'react-router-dom';
 
+import "../css/cardDetails.css";
 
 export default function CardDetails() {
    const { id } = useParams();
    const location = useLocation();
    const navigate = useNavigate();
+   const { name, type, rarity, picture, skill, skillVideo, ultimateVideo, constellation, idleAnimation1, idleAnimation2 } = location.state || {};
 
-   const { name, type, rarity, picture, ultimateVideo , skillVideo, idleAnimation1, idleAnimation2 , constellation , skill} = location.state || {};
+   // Single state to manage what's being hovered
+   const [activeTab, setActiveTab] = useState(null);
 
-   const [showUltimate, setShowUltimate] = useState(false);
-   const [showSkill, setShowSkill] = useState(false);
-   const [showIdleAnimation1 , setShowIdleAnimation1] = useState(false);
-   const [showIdleAnimation2 , setShowIdleAnimation2] = useState(false);
-   const [showConstellation, setShowConstellation] = useState(false);
-   
+   if (!id) return <div className="details-container"><h1>Card not found</h1></div>;
 
-// Helper function to render stars
-   const renderStars = (count) => {
-      // Ensure count is a number and fallback to 0 if undefined
-      const starCount = parseInt(count) || 0;
-      const starColor = starCount >= 5 ? '#f1c40f' : '#987654';
-      
-      // Create an array with 'starCount' elements and map to icons
-      return Array.from({ length: starCount }, (_, index) => (
-         <span key={index} className="star-icon" style={{ color: starColor }} >★</span>
-      ));
-   };
-
-   if (!id) {
-      return (
-         <div className="details-container">
-            <div className="details-card">
-               <h1 className="details-title">Card not found</h1>
-               <button 
-                  className="details-button"
-                  onClick={() => navigate('/')}
-               >
-                  Back to Home
-               </button>
-            </div>
-         </div>
-      );
-   }
+   // Configuration for your buttons to keep JSX clean
+   const controls = [
+      { id: 'const', label: 'C', data: constellation, title: 'Constellation' },
+      { id: 'idle1', label: '1', data: idleAnimation1, title: 'Idle 1' },
+      { id: 'idle2', label: '2', data: idleAnimation2, title: 'Idle 2' },
+      { id: 'skill', label: 'E', data: skillVideo, title: 'Elemental Skill' },
+      { id: 'ult', label: 'Q', data: ultimateVideo, title: 'Ultimate' },
+   ];
 
    return (
       <div className="details-container">
+         {/* LEFT SIDE: Description Text */}
+         <div className="side-panel left-part">
+            {activeTab === 'skill' && skill && (
+               <div className="description-card fadeIn">
+                  <h2 className="skill-main-title">{skill.title}</h2>
+                  <p className="skill-intro">{skill.intro}</p>
+                  <ul className="skill-list">
+                     {skill.effects.map((eff, i) => <li key={i}>{eff}</li>)}
+                  </ul>
+               </div>
+            )}
+         </div>
 
-      <div className="left-part">
-      
-      <p>LEFT PART</p>
-
-      </div>
-
-
+         {/* CENTER: Main Card */}
          <div className="details-card">
             <div className="ability-controls">
-
-               {/* Constellation Triggers */}
-               <div 
-                  className="constellation-trigger"
-                  onMouseEnter={() => setShowConstellation(true)}
-                  onMouseLeave={() => setShowConstellation(false)}
-               >
-                  C
-               </div>
-
-               {/* Idle Animation1 Triggers */}
-               <div 
-                  className="idle1-trigger"
-                  onMouseEnter={() => setShowIdleAnimation1(true)}
-                  onMouseLeave={() => setShowIdleAnimation1(false)}
-               >1
-               </div>
-               
-               {/* Idle Animation2 Triggers */}
-               <div 
-                  className="idle2-trigger"
-                  onMouseEnter={() => setShowIdleAnimation2(true)}
-                  onMouseLeave={() => setShowIdleAnimation2(false)}
-               >2
-               </div>
-
-{/* The E Button */}
-            <div 
-               className="skill-trigger"
-               onMouseEnter={() => setShowSkill(true)}
-               onMouseLeave={() => setShowSkill(false)}
-            >
-               E
-            </div>
-
-{/* The Q Button */}
-            <div 
-               className="ultimate-trigger"
-               onMouseEnter={() => setShowUltimate(true)}
-               onMouseLeave={() => setShowUltimate(false)}
-            >
-               Q
-            </div>
-
-            {/* The Idle1 Animation Popup */}
-            {showIdleAnimation1 && (
-               <div className="ultimate-popup">
-                  <img 
-                     src={idleAnimation1} 
-                     alt="Idle Animation 1" 
-                  />
-               </div>
-            )}
-
-            {/* The Idle2 Animation Popup */}
-            {showIdleAnimation2 && (
-               <div className="ultimate-popup">
-                  <img 
-                     src={idleAnimation2} 
-                     alt="Idle Animation 2" 
-                  />
-               </div>
-            )}
-
-            {/* The Constellation Popup */}
-            {showConstellation && (
-               <div className="ultimate-popup">
-                  <div>
-                     <h3>Constellation</h3>
-                     <p>Hovering over the "Cons" button shows this video/GIF.</p>
-                     <p>It demonstrates the character's constellation effects.</p>
+               {controls.map((ctrl) => (
+                  <div 
+                     key={ctrl.id}
+                     className="control-trigger" 
+                     onMouseEnter={() => setActiveTab(ctrl.id)}
+                     onMouseLeave={() => setActiveTab(null)}
+                  >
+                     {ctrl.label}
                   </div>
-                  <img 
-                     src={constellation} 
-                     alt="Constellation" 
-                  />
-               </div>
-            )}
-
-
-
-            {/* The Popup Video/GIF */}
-            {showUltimate && (
-               <div className="ultimate-popup">
-                  <div>
-                     <h3>Ultimate Ability</h3>
-                     <p>Hovering over the "Q" button shows this video/GIF.</p>
-                     <p>It demonstrates the character's ultimate ability in action.</p>
-                  </div>
-                  <img 
-                     src={ultimateVideo} 
-                     alt="Ultimate Ability" 
-                  />
-               </div>
-            )}
-
-                        {/* The Popup Video/GIF */}
-            {showSkill && (
-               <div className="ultimate-popup">
-
-                 
-
-                  <div className="skill-card">
-                        {/* Main Header */}
-                        <h2 className="skill-main-title">{skill.title}</h2>
-                        
-                        {/* Intro Text */}
-                        <p className="skill-intro">{skill.intro}</p>
-
-                        {/* Sub-section (Inspiration Field) */}
-                        <div className="skill-sub-section">
-                        <h3 className="skill-sub-title">{skill.subTitle}</h3>
-                        <ul className="skill-list">
-                           {skill.effects.map((effect, index) => (
-                              <li key={index} className="skill-list-item">
-                              {effect}
-                              </li>
-                           ))}
-                        </ul>
-                        </div>
-                     </div>
-  
-
-                 
-                  
-                  <img 
-                     src={skillVideo} 
-                     alt="Skill Ability" 
-                  />
-               </div>
-            )}
-
-
+               ))}
+            </div>
 
             <h1 className="details-title">#{id}</h1>
+            <img src={picture} alt={name} className="details-image" />
+            <p className="details-info"><strong>{name}</strong> | {type}</p>
+            
+            {/* Action Buttons */}
+            <div className="button-group">
+               <button className="details-button" onClick={() => navigate(-1)}>Return</button>
+               <button className="details-button" onClick={() => navigate('/')}>Home</button>
+            </div>
 
-            <p className="details-info"><strong>Name:</strong> {name}</p>
-            <p className="details-info"><strong>Type:</strong> {type}</p>
-
-            <p className="details-info">
-               <strong>Rarity:</strong> 
-               <span className="stars-container">
-                  {renderStars(rarity)}
-               </span>
-            </p>
-
-            <img 
-               src={picture} 
-               alt={name} 
-               className="details-image"
-            /><br/>
-
-               <button 
-                  className="details-button"
-                  onClick={() => navigate('/caracter')}
-               >
-                  Return
-               </button>
-
-            <button 
-               className="details-button"
-               onClick={() => navigate('/')}
-            >Back to Home
-            </button>
+            {/* RIGHT SIDE: Video/GIF Popups (Relative to the card) */}
+            {activeTab && (
+               <div className="preview-popup">
+                  <img src={controls.find(c => c.id === activeTab)?.data} alt="Preview" />
+               </div>
+            )}
          </div>
-      </div>
 
-      <div className="right-part">
-      
-      <p>RIGHT PART</p>
-
-      </div>
-
+         <div className="side-panel right-part">
+            <p>Character Stats or Lore</p>
+         </div>
       </div>
    );
 }
