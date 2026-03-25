@@ -12,7 +12,8 @@ This project is just a side past time funny one which purpose is to store and ma
 
 ### Character details
 
-<img width="1366" height="607" alt="image" src="https://github.com/user-attachments/assets/40cf630f-a89b-4b80-8757-06fab6a75ae1" />
+
+<img width="1366" height="607" alt="image" src="https://github.com/user-attachments/assets/47991db1-91f6-494d-b26c-dcb428b1bc5b" />
 
 
 
