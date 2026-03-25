@@ -80,7 +80,7 @@
   transition: all 0.3s ease;
 }
 
-.control-trigger:hover {
+.control-trigger.active {
   background: var(--primary);
   color: white;
   box-shadow: 0 0 15px var(--primary);
@@ -119,12 +119,15 @@
 }
 
 /* --- Skill Description (Left Side) --- */
-.description-card {
+.description-card.scrollable-content {
   background: rgba(0, 0, 0, 0.4);
   padding: 25px;
   border-radius: 16px;
   border-left: 4px solid var(--primary);
   animation: slideInLeft 0.4s ease-out;
+  max-height: 50px;
+  overflow-y: auto;
+  padding-right: 15px;
 }
 
 .skill-main-title {
@@ -187,6 +190,18 @@
 .details-button:hover {
   background: var(--primary);
   box-shadow: 0 5px 15px rgba(108, 99, 255, 0.4);
+}
+
+/* Custom Scrollbar Styling (Optional but recommended for dark themes) */
+.description-card::-webkit-scrollbar {
+  width: 6px;
+}
+.description-card::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 10px;
+}
+.description-card::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
 }
 
 /* --- Animations --- */

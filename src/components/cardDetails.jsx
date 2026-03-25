@@ -12,6 +12,10 @@ export default function CardDetails() {
    // Single state to manage what's being hovered
    const [activeTab, setActiveTab] = useState(null);
 
+   const handleToggle = (tabId) => {
+      setActiveTab(prev => prev === tabId ? null : tabId);
+   };
+
    if (!id) return <div className="details-container"><h1>Card not found</h1></div>;
 
    // Configuration for your buttons to keep JSX clean
@@ -24,11 +28,11 @@ export default function CardDetails() {
    ];
 
    return (
-      <div className="details-container">
+      <div className="details-container" onClick={() => setActiveTab(null)}>
          {/* LEFT SIDE: Description Text */}
          <div className="side-panel left-part">
             {activeTab === 'skill' && skill && (
-               <div className="description-card fadeIn">
+               <div className="description-card fadeIn" onClick={(e) => e.stopPropagation()}>
                   <h2 className="skill-main-title">{skill.title}</h2>
                   <p className="skill-intro">{skill.intro}</p>
                   <ul className="skill-list">
@@ -39,14 +43,13 @@ export default function CardDetails() {
          </div>
 
          {/* CENTER: Main Card */}
-         <div className="details-card">
+         <div className="details-card" onClick={(e) => e.stopPropagation()}>
             <div className="ability-controls">
                {controls.map((ctrl) => (
                   <div 
                      key={ctrl.id}
-                     className="control-trigger" 
-                     onMouseEnter={() => setActiveTab(ctrl.id)}
-                     onMouseLeave={() => setActiveTab(null)}
+                     className={`control-trigger ${activeTab === ctrl.id ? 'active' : ''}`}
+                     onClick={() => handleToggle(ctrl.id)}
                   >
                      {ctrl.label}
                   </div>
