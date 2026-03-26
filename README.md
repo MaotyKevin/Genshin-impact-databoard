@@ -26,7 +26,7 @@ This project is a fan-made application and is not affiliated with or endorsed by
 All in-game assets, data, and iconography related to **Genshin Impact** are the exclusive property of **HoYoverse (miHoYo Co., Ltd.)**.
 
 ## Contributors
-- [Nyndow] (https://github.com/Nyndow)
+- [Nyndow](https://github.com/Nyndow)
 
 ## 🎨 Credits
 * **Paimon Image:** Created by [bigsize-pictures](https://www.deviantart.com/bigsize-pictures)] 
