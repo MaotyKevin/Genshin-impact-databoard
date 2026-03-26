@@ -12,10 +12,10 @@ This project is just a side past time funny one which purpose is to store and ma
 
 ### Character details
 
-
 <img width="1366" height="607" alt="image" src="https://github.com/user-attachments/assets/47991db1-91f6-494d-b26c-dcb428b1bc5b" />
 
-
+Features : 
+-User can now navigate between skill buttons through keyboard arrows (left,right) without having to clicks on them 
 
 **Note: since this is still in development,others things surely will be added in future**
 
