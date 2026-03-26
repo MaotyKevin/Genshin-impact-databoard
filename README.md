@@ -14,8 +14,8 @@ This project is just a side past time funny one which purpose is to store and ma
 
 <img width="1366" height="607" alt="image" src="https://github.com/user-attachments/assets/47991db1-91f6-494d-b26c-dcb428b1bc5b" />
 
-Features : 
--User can now navigate between skill buttons through keyboard arrows (left,right) without having to clicks on them 
+#### Features : 
+- User can now navigate between skill buttons through keyboard arrows (left,right) without having to clicks on them 
 
 **Note: since this is still in development,others things surely will be added in future**
 
@@ -24,6 +24,9 @@ ___________________________________
 ## ⚖️ Disclaimer
 This project is a fan-made application and is not affiliated with or endorsed by **HoYoverse**. 
 All in-game assets, data, and iconography related to **Genshin Impact** are the exclusive property of **HoYoverse (miHoYo Co., Ltd.)**.
+
+## Contributors
+- [Nyndow] (https://github.com/Nyndow)
 
 ## 🎨 Credits
 * **Paimon Image:** Created by [bigsize-pictures](https://www.deviantart.com/bigsize-pictures)] 
