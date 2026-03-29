@@ -15,6 +15,8 @@ export default function CardDetails() {
       picture,
       skill,
       skillVideo,
+      skillIcon,
+      ultIcon,
       ultimateVideo,
       constellation,
       idleAnimation1,
@@ -25,12 +27,12 @@ const [activeTab, setActiveTab] = useState('idle1');
 const [currentIndex, setCurrentIndex] = useState(null);
 
    const controls = useMemo(() => [
-      { id: 'const', label: 'C', data: constellation, title: 'Constellation' },
+      { id: 'const', label: 'C',data: constellation, title: 'Constellation' },
       { id: 'idle1', label: '1', data: idleAnimation1, title: 'Idle 1' },
       { id: 'idle2', label: '2', data: idleAnimation2, title: 'Idle 2' },
-      { id: 'skill', label: 'E', data: skillVideo, title: 'Elemental Skill' },
-      { id: 'ult', label: 'Q', data: ultimateVideo, title: 'Ultimate' },
-   ], [constellation, idleAnimation1, idleAnimation2, skillVideo, ultimateVideo]);
+      { id: 'skill', label: 'E', data: skillVideo, title: 'Elemental Skill' , skillIcon : skillIcon},
+      { id: 'ult', label: 'Q', data: ultimateVideo, title: 'Ultimate' , ultIcon : ultIcon},
+   ], [constellation, idleAnimation1, idleAnimation2, skillVideo, ultimateVideo , skillIcon, ultIcon]);
 
    useEffect(() => {
    const index = controls.findIndex(c => c.id === 'idle1');
@@ -116,9 +118,24 @@ const [currentIndex, setCurrentIndex] = useState(null);
                   <div
                      key={ctrl.id}
                      className={`control-trigger ${activeTab === ctrl.id ? 'active' : ''}`}
-                     onClick={() => handleToggle(ctrl.id)}
+                     title={ctrl.title}
+                     onClick={(e) => 
+                        
+                        {e.stopPropagation();
+                           handleToggle(ctrl.id)
+                        }
+                     }
+                        
                   >
-                     {ctrl.label}
+                           {(ctrl.id === 'skill' || ctrl.id === 'ult') && (ctrl.skillIcon || ctrl.ultIcon) ? (
+                  <img 
+                     src={ctrl.skillIcon || ctrl.ultIcon} 
+                     alt={ctrl.label} 
+                     className="control-icon-img" 
+                  />
+               ) : (
+                  <span>{ctrl.label}</span>
+               )}
                   </div>
                ))}
             </div>

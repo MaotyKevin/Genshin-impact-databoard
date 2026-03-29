@@ -70,6 +70,8 @@ export default function Caracter() {
                   rarity={profile.rarity}
                   ultimateVideo={profile.ultimateVideo}
                   skillVideo={profile.skillVideo} 
+                  skillIcon={profile.skillIcon}
+                  ultIcon={profile.ultIcon}
                   idleAnimation1={profile.idleAnimation1}
                   idleAnimation2={profile.idleAnimation2}
                   constellation={profile.constellation}

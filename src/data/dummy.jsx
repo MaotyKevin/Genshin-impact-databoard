@@ -4,18 +4,24 @@ import benett from '../assets/Bennett_Icon.webp'
 
 import arlecchinoVideo from '../assets/arlecchino-genshin-impact.gif'
 import arlecchinoSkillVideo from '../assets/arlecchino-skill.gif'
+import arlecchinoUltIcon from '../assets/Talent_Balemoon_Rising.webp'
 import arlecchinoIdle1 from '../assets/arlecchino-idle1.gif'
 import arlecchinoIdle2 from '../assets/arlecchino-idle2.gif'
 import arlecchinoConstellation from '../assets/arlecchino-cons.webp'
+import arlecchinoSkillIcon from '../assets/Talent_All_Is_Ash.webp'
 
 import neuvilletteVideo from '../assets/neuvillette-burst.gif'
 import neuvilletteSkillVideo from '../assets/neuvillette-skill.gif'
+import neuvilletteUltIcon from '../assets/Talent_O_Tides,_I_Have_Returned.webp'
+import neuvilletteSkillIcon from '../assets/Talent_O_Tears,_I_Shall_Repay.webp'
 import neuvilletteIdle1 from '../assets/neuvillette-idle1.gif'
 import neuvilletteIdle2 from '../assets/neuvillette-idle2.gif'
 import neuvilletteConstellation from '../assets/neuvillette-cons.webp'
 
 import benettVideo from '../assets/benett-burst.gif'
 import benettSkillVideo from '../assets/benett-skill.gif'
+import benettUltIcon from '../assets/Talent_Fantastic_Voyage.webp'
+import benettSkillIcon from '../assets/Talent_Passion_Overload.webp'
 import benettIdle1 from '../assets/benett-idle1.gif'
 import benettIdle2 from '../assets/benett-idle2.gif'
 import benettConstellation from '../assets/benett-cons.webp'
@@ -30,6 +36,8 @@ export const caractersProfiles = [
       rarity: '5',
       ultimateVideo: arlecchinoVideo,
       skillVideo: arlecchinoSkillVideo,
+      ultIcon : arlecchinoUltIcon,
+      skillIcon: arlecchinoSkillIcon,
       idleAnimation1: arlecchinoIdle1,
       idleAnimation2: arlecchinoIdle2,
       constellation: arlecchinoConstellation,
@@ -51,6 +59,8 @@ export const caractersProfiles = [
       rarity: '4',
       ultimateVideo: benettVideo,
       skillVideo: benettSkillVideo,
+      skillIcon: benettSkillIcon,
+      ultIcon: benettUltIcon,
       idleAnimation1: benettIdle1,
       idleAnimation2: benettIdle2,
       constellation: benettConstellation,
@@ -73,6 +83,8 @@ export const caractersProfiles = [
       rarity: '5',
       ultimateVideo: neuvilletteVideo,
       skillVideo: neuvilletteSkillVideo,
+      skillIcon: neuvilletteSkillIcon,
+      ultIcon: neuvilletteUltIcon,
       idleAnimation1: neuvilletteIdle1,
       idleAnimation2: neuvilletteIdle2,
       constellation: neuvilletteConstellation,
