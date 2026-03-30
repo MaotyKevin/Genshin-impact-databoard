@@ -1,6 +1,7 @@
 import arlecchino from '../assets/Arlecchino_Icon.webp'
 import neuvillette from '../assets/Neuvillette_Icon.webp'
 import benett from '../assets/Bennett_Icon.webp'
+import zibai from '../assets/Zibai_Icon.webp'
 
 import arlecchinoVideo from '../assets/arlecchino-genshin-impact.gif'
 import arlecchinoSkillVideo from '../assets/arlecchino-skill.gif'
@@ -25,6 +26,14 @@ import benettSkillIcon from '../assets/Talent_Passion_Overload.webp'
 import benettIdle1 from '../assets/benett-idle1.gif'
 import benettIdle2 from '../assets/benett-idle2.gif'
 import benettConstellation from '../assets/benett-cons.webp'
+
+import zibaiVideo from '../assets/zibai-burst.gif'
+import zibaiSkillVideo from '../assets/zibai-skill.gif'
+import zibaiUltIcon from '../assets/Talent_Tri-Sphere_Eminence.webp'
+import zibaiSkillIcon from '../assets/Talent_Heaven_and_Earth_Made_Manifest.webp'
+import zibaiIdle1 from '../assets/zibai-idle1.gif'
+import zibaiIdle2 from '../assets/zibai-idle2.gif'
+import zibaiConstellation from '../assets/zibai-cons.webp'
 
 
 export const caractersProfiles = [
@@ -98,4 +107,25 @@ export const caractersProfiles = [
          ]
       }
    },
+   {    id: 4,
+      name: 'zibai',
+      type : 'geo',
+      picture: zibai,
+      rarity: '5',
+      ultimateVideo: zibaiVideo,
+      skillVideo: zibaiSkillVideo,
+      ultIcon: zibaiUltIcon,
+      skillIcon: zibaiSkillIcon,
+      idleAnimation1: zibaiIdle1,
+      idleAnimation2: zibaiIdle2,
+      constellation: zibaiConstellation,
+      skill : {
+         title: "Heaven and Earth Made Manifest",
+         intro: "Summoning a shadow of her former powers, she switches to the Lunar Phase Shift mode.In this mode, Zibai's Normal Attacks and Charged Attacks will deal Geo DMG that cannot be overridden by other infusions, and she can accrue special Phase Shift Radiance through different methods. Zibai can consume Phase Shift Radiance to unleash the special Elemental Skill Spirit Steed's Stride.",
+         subTitle: "Moonsign: Ascendant Gleam",
+         effects: [
+            "While in the Lunar Phase Shift mode, when Zibai performs Normal Attacks, the fourth attack will deal an additional instance of Geo DMG, which is considered Lunar-Crystallize Reaction DMG."
+         ]
+      }
+   }
 ]
