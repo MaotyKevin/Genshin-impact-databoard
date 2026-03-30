@@ -1,4 +1,5 @@
-import { useNavigate } from 'react-router-dom';
+//import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router";
 
 function Card({ id, name, type, rarity, picture, ultimateVideo, skillVideo,skillIcon ,ultIcon,idleAnimation1, idleAnimation2 ,constellation , skill }) {
    const navigate = useNavigate();
