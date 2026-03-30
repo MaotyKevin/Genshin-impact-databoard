@@ -11,7 +11,7 @@ export default function CardDetails() {
    const {
       name,
       type,
-      rarity,
+      //rarity,
       picture,
       skill,
       skillVideo,
