@@ -31,5 +31,7 @@ All in-game assets, data, and iconography related to **Genshin Impact** are the 
 ## Contributors
 - [Nyndow](https://github.com/Nyndow)
 
+You can contribute by sending a commit/pull request from a separated branche then I'll review your codes, + add your name here
+
 ## 🎨 Credits
 * **Paimon Image:** Created by [bigsize-pictures](https://www.deviantart.com/bigsize-pictures)] 
