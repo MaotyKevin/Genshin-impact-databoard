@@ -1,39 +1,48 @@
 import arlecchino from '../assets/Arlecchino_Icon.webp'
 import neuvillette from '../assets/Neuvillette_Icon.webp'
 import benett from '../assets/Bennett_Icon.webp'
-import zibai from '../assets/Zibai_Icon.webp'
 
-import arlecchinoVideo from '../assets/arlecchino-genshin-impact.gif'
-import arlecchinoSkillVideo from '../assets/arlecchino-skill.gif'
 import arlecchinoUltIcon from '../assets/Talent_Balemoon_Rising.webp'
-import arlecchinoIdle1 from '../assets/arlecchino-idle1.gif'
-import arlecchinoIdle2 from '../assets/arlecchino-idle2.gif'
-import arlecchinoConstellation from '../assets/arlecchino-cons.webp'
 import arlecchinoSkillIcon from '../assets/Talent_All_Is_Ash.webp'
 
-import neuvilletteVideo from '../assets/neuvillette-burst.gif'
-import neuvilletteSkillVideo from '../assets/neuvillette-skill.gif'
+
 import neuvilletteUltIcon from '../assets/Talent_O_Tides,_I_Have_Returned.webp'
 import neuvilletteSkillIcon from '../assets/Talent_O_Tears,_I_Shall_Repay.webp'
-import neuvilletteIdle1 from '../assets/neuvillette-idle1.gif'
-import neuvilletteIdle2 from '../assets/neuvillette-idle2.gif'
-import neuvilletteConstellation from '../assets/neuvillette-cons.webp'
 
-import benettVideo from '../assets/benett-burst.gif'
-import benettSkillVideo from '../assets/benett-skill.gif'
+
 import benettUltIcon from '../assets/Talent_Fantastic_Voyage.webp'
 import benettSkillIcon from '../assets/Talent_Passion_Overload.webp'
-import benettIdle1 from '../assets/benett-idle1.gif'
-import benettIdle2 from '../assets/benett-idle2.gif'
-import benettConstellation from '../assets/benett-cons.webp'
 
-import zibaiVideo from '../assets/zibai-burst.gif'
-import zibaiSkillVideo from '../assets/zibai-skill.gif'
+
+
 import zibaiUltIcon from '../assets/Talent_Tri-Sphere_Eminence.webp'
 import zibaiSkillIcon from '../assets/Talent_Heaven_and_Earth_Made_Manifest.webp'
-import zibaiIdle1 from '../assets/zibai-idle1.gif'
-import zibaiIdle2 from '../assets/zibai-idle2.gif'
-import zibaiConstellation from '../assets/zibai-cons.webp'
+
+
+const arlecchinoIdle1 = 'https://act-upload.hoyoverse.com/event-ugc-hoyowiki/2024/04/30/35428890/2ab72b0e0036fc4b2868a0ec92afd300_1213585275251057431.gif'
+const arlecchinoIdle2 = 'https://act-upload.hoyoverse.com/event-ugc-hoyowiki/2024/04/30/35428890/ca789a4d016cbefd510d0480eb3ca179_7590222360745429014.gif'
+const arlecchinoSkillVideo = 'https://act-upload.hoyoverse.com/event-ugc-hoyowiki/2024/04/24/35428890/a8ecfb9276f38b172a6484c2d20e046b_5593868496833745165.gif'
+const arlecchinoVideo = 'https://act-upload.hoyoverse.com/event-ugc-hoyowiki/2024/04/22/35428890/4ead730f49de4774c539073517b39ba0_2514743312537118649.gif'
+const arlecchinoConstellation = 'https://act-upload.hoyoverse.com/event-ugc-hoyowiki/2024/04/30/35428890/e1185a0732ad771a615ee644c3a49a37_6368278175498171098.png?x-oss-process=image%2Fformat%2Cwebp'
+
+const neuvilletteIdle1 = 'https://upload-static.hoyoverse.com/hoyolab-wiki/2023/09/27/35428890/983f58bbec89a82cb3e46ea579027632_4620199517387909247.gif'
+const neuvilletteIdle2 = 'https://upload-static.hoyoverse.com/hoyolab-wiki/2023/09/27/35428890/076a8a5e15ace52b76cf7113c186f6bb_8983616827155270486.gif'
+const neuvilletteConstellation = 'https://upload-static.hoyoverse.com/hoyolab-wiki/2023/09/27/35428890/cbec2a96aca08e448a92d45e2563f910_8932482024479326535.png?x-oss-process=image%2Fformat%2Cwebp'
+const neuvilletteSkillVideo = 'https://upload-static.hoyoverse.com/hoyolab-wiki/2023/09/26/35428890/2117805081f3f70017975f439920ff4d_8102480149747258683.gif'
+const neuvilletteVideo = 'https://upload-static.hoyoverse.com/hoyolab-wiki/2023/09/26/35428890/2a7c3eeda9a016b65ed656fc1f71dc9c_7945139733788482590.gif'
+
+const benettIdle1 = 'https://upload-static.hoyoverse.com/hoyolab-wiki/2022/07/31/1023623/253d4d0f543836ac1d5c4dd28684c5c3_1262777856850748790.gif'
+const benettIdle2 = 'https://upload-static.hoyoverse.com/hoyolab-wiki/2022/07/31/1023623/ead150a81a57c6c117778e553960d1d4_5662116647606974233.gif'
+const benettConstellation = 'https://upload-static.hoyoverse.com/hoyolab-wiki/2022/11/12/35428890/0a4c5c29b24e64b08a24ca95faec62c7_6669442018915136433.png?x-oss-process=image%2Fformat%2Cwebp'
+const benettSkillVideo = 'https://bbs.hoyolab.com/hoyowiki/picture/character/%E7%8F%AD%E5%B0%BC%E7%89%B9/battle_talent_1/battle_talent_1.gif'
+const benettVideo = 'https://bbs.hoyolab.com/hoyowiki/picture/character/%E7%8F%AD%E5%B0%BC%E7%89%B9/battle_talent_2/battle_talent_2.gif'
+
+const zibai = 'https://static.wikia.nocookie.net/gensin-impact/images/2/22/Zibai_Icon.png/revision/latest?cb=20260203100351'
+const zibaiSkillVideo = 'https://act-webstatic.hoyoverse.com/event-static-hoyowiki-admin/2026/01/29/fed0ad1a8065ec952bc2dcdcf349bb46_5359379672418797654.gif'
+const zibaiVideo = 'https://act-webstatic.hoyoverse.com/event-static-hoyowiki-admin/2026/01/29/25ce89c341ccec8db61fbe29792caf9a_8115467737723805531.gif'
+const zibaiIdle1 = 'https://act-webstatic.hoyoverse.com/event-static-hoyowiki-admin/2026/01/29/3f9276f066c4a840e8f376e3c4f44c29_7144772731612011.gif'
+const zibaiIdle2 = 'https://act-webstatic.hoyoverse.com/event-static-hoyowiki-admin/2026/01/29/16a13bce19e8c979424a736ff21d527b_1838655960764611197.gif'
+const zibaiConstellation = 'https://act-upload.hoyoverse.com/event-ugc-hoyowiki/2026/02/24/35428890/a4c11d7ce203e9b0452892de70aef5e0_7398538137425799973.png?x-oss-process=image%2Fformat%2Cwebp'
 
 
 export const caractersProfiles = [
