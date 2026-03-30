@@ -1,5 +1,5 @@
-
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+//import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from "react-router";
 import Home from './pages/home';
 import Header from './pages/header';
 import Caracter from './components/cardList';
