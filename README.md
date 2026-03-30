@@ -7,7 +7,7 @@ This project is just a side past time funny one which purpose is to store and ma
 
 ### Character list and filter
 
-<img width="1366" height="607" alt="image" src="https://github.com/user-attachments/assets/6635145d-123e-410a-98d8-363956b5f73f" />
+<img width="1366" height="603" alt="image" src="https://github.com/user-attachments/assets/4b139645-0f0d-4588-bde2-7f80d0577f5c" />
 
 
 ### Character details
