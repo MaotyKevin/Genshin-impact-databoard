@@ -16,7 +16,7 @@ This project is just a side past time funny one which purpose is to store and ma
 
 
 #### Features : 
-- User can now navigate between skill buttons through keyboard arrows (left,right) without having to clicks on them 
+- User can now navigate between skill buttons through keyboard arrows (left,right) without having to click on them 
 - Since skills buttons label were replaced by their respective icons , I've added tooltip title when hovering them to give a minimal description to know what is it about 
 - From now, I lightened the project structure by replacing the local import into external links (excepted some minimal icons) especially for skills and bursts
 
