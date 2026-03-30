@@ -34,4 +34,4 @@ All in-game assets, data, and iconography related to **Genshin Impact** are the 
 You can contribute by forking the project -> sending a commit/pull request from a **separated branche** -> then I'll review your codes, + add your name here
 
 ## 🎨 Credits
-* **Paimon Image:** Created by [bigsize-pictures](https://www.deviantart.com/bigsize-pictures)] 
+* **Paimon Image:** Created by [bigsize-pictures](https://www.deviantart.com/bigsize-pictures)
