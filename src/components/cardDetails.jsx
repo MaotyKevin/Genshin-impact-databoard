@@ -15,6 +15,7 @@ export default function CardDetails() {
       //rarity,
       picture,
       skill,
+      ult,
       skillVideo,
       skillIcon,
       ultIcon,
@@ -91,23 +92,34 @@ const [currentIndex, setCurrentIndex] = useState(null);
          setCurrentIndex(null);
       }}>
 
-         {/* LEFT SIDE */}
-         <div className="side-panel left-part">
-            {activeTab === 'skill' && skill && (
+      {/* LEFT SIDE */}
+      <div className="side-panel left-part">
+         {(() => {
+            const activeData = activeTab === 'skill' ? skill : activeTab === 'ult' ? ult : null;
+            
+            if (!activeData) return null;
+
+            return (
                <div
                   className="description-card fadeIn"
                   onClick={(e) => e.stopPropagation()}
                >
-                  <h2 className="skill-main-title">{skill.title}</h2>
-                  <p className="skill-intro">{skill.intro}</p>
-                  <ul className="skill-list">
-                     {skill.effects.map((eff, i) => (
-                        <li key={i}>{eff}</li>
-                     ))}
-                  </ul>
+                  <h2 className="skill-main-title">{activeData.title}</h2>          
+                  <p className="skill-intro">{activeData.intro}</p>
+           
+                     <h3 className="skill-sub-title">{activeData.subTitle}</h3>
+     
+                     {activeData.effects && (
+                        <ul className="skill-list">
+                           {activeData.effects?.map((eff, i) => (
+                              <li key={i}>{eff}</li>
+                           ))}
+                        </ul>
+                     )}
                </div>
-            )}
-         </div>
+            );
+         })()}
+      </div>
 
          {/* CENTER */}
          <div
@@ -176,7 +188,7 @@ const [currentIndex, setCurrentIndex] = useState(null);
 
          {/* RIGHT SIDE */}
          <div className="side-panel right-part">
-            <p>Character Stats or Lore</p>
+
          </div>
       </div>
    );

@@ -67,8 +67,16 @@ export const caractersProfiles = [
       "Lasts 30s. Every 5s, it will deal 1 instance of Pyro DMG to the opponent. Max 2 instances. This DMG will be considered Elemental Skill DMG",
       "When Arlecchino uses a Charged Attack or her Elemental Burst, Balemoon Rising, she will absorb and clear nearby Blood-Debt Directives. Each Directive absorbed grants her a Bond of Life worth 65% of her Max HP","The maximum value of the Bond of Life she can be granted through Blood-Debt Directives within 35s after using her Elemental Skill is 145% of her Max HP. Using the Elemental Skill again during this duration will restart the count on duration and the limit on the value of Bond of Life she may gain from Blood-Debt Directives."
     ]
-      }
-   },
+      },
+      ult: {
+         title: "Balemoon Rising",
+         intro: "Arlecchino's great wing of Balemoon Bloodfire beats as she absorbs and clears Blood-Debt Directives around her. She deals AoE Pyro DMG before clearing the CD of All Is Ash and healing herself. The healing is based on her Bond of Life value and ATK.",
+         subTitle: "",
+         effects: [
+            ""
+         ],
+         italianDesc : "It is commonly believed throughout Teyvat that moon phases other than the full moon are mere metaphors of ill-omen, used only by those who practice alchemy and astrology.She saw this crimson moon in her dreams many times. Were those portents of disaster? Indeed they were, but the destined catastrophes belonged to those who enraged her."
+   } },
    {
       id: 2,
       name: 'benett',
@@ -83,14 +91,25 @@ export const caractersProfiles = [
       idleAnimation2: benettIdle2,
       constellation: benettConstellation,
       skill : {
+         title: "Passion Overload",
+         intro: "Bennett puts all his fire and passion for adventuring into his sword. Results may vary based on how fired up he is...",
+         subTitle: "Hold (Short)",
+         effects: [
+            "Level 1: Strikes twice, dealing Pyro DMG and launching opponents.",
+            "Level 2: Unleashes 3 consecutive attacks that deal impressive Pyro DMG, but the last attack triggers an explosion that launches both Bennett and the enemy.",
+            "Bennett takes no damage from being launched."
+         ]
+      },
+      ult: {
          title: "Fantastic Voyage",
          intro: "Bennett performs a jumping attack that deals Pyro DMG, creating an Inspiration Field.",
          subTitle: "Inspiration Field",
          effects: [
             "If the health of a character within the AoE is equal to or falls below 70%, their health will continuously regenerate. The amount of HP restored scales off Bennett's Max HP.",
-            "If the health of a character within the AoE is higher than 70%, they gain an ATK Bonus that is based on Bennett's Base ATK.",
+            "if the health of a character within the AoE is higher than 70%, they gain an ATK Bonus that is based on Bennett's Base ATK.",
             "Imbues characters within the AoE with Pyro."
-         ]
+         ],
+         italianDesc : "Benny's Adventure Team's adventures are always fraught with unexpected danger. However, Bennett is more inclined to call them journeys full of wonder, excitement, and beauty."
       }
    },
    {   
@@ -114,6 +133,11 @@ export const caractersProfiles = [
             "Increases Neuvillette's resistance to interruption and grants him the ability to walk on water for 10s.",
             "When Neuvillette is under the effect of Hydro Infusion, his Normal and Charged Attacks will deal Hydro DMG instead of Physical DMG. Additionally, his Charged Attack will have its DMG increased by 15% and will not consume Stamina."
          ]
+      },
+      ult: {
+         title: "O Tides, I Have Returned",
+         intro: "Unleashes waves that will deal AoE Hydro DMG based on Neuvillette's Max HP. After a short interval, 2 waterfalls will descend and deal Hydro DMG in a somewhat smaller AoE, and will generate 6 Sourcewater Droplets within an area in front.",
+         italianDesc : "The law is only established after its publication, and above that, the laws of nature have governed all species and eras since ancient times."
       }
    },
    {    id: 4,
@@ -135,6 +159,13 @@ export const caractersProfiles = [
          effects: [
             "While in the Lunar Phase Shift mode, when Zibai performs Normal Attacks, the fourth attack will deal an additional instance of Geo DMG, which is considered Lunar-Crystallize Reaction DMG."
          ]
+      },
+      ult: {
+         title: "Tri-Sphere Eminence",
+         intro: "Zibai operates the Jadelight Canopy, dealing two instances of Geo DMG, with the second damage instance being considered Lunar-Crystallize Reaction DMG.When cast, if Zibai is in the Lunar Phase Shift, the duration of the current Lunar Phase Shift will extend by an additional 1.7s.",
+         subTitle: "",
+         italianDesc : "Legend has it that long ago, when a rogue shooting star bright enough to illuminate the night drew near, the people of this world caught a glimpse of this treasure's radiant splendor."
       }
+
    }
 ]

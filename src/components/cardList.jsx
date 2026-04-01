@@ -76,6 +76,7 @@ export default function Caracter() {
                   idleAnimation2={profile.idleAnimation2}
                   constellation={profile.constellation}
                   skill={profile.skill}
+                  ult={profile.ult}
                />
             ))}
          </div>

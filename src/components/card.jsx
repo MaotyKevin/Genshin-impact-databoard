@@ -1,11 +1,11 @@
 //import { useNavigate } from 'react-router-dom';
 import { useNavigate } from "react-router";
 
-function Card({ id, name, type, rarity, picture, ultimateVideo, skillVideo,skillIcon ,ultIcon,idleAnimation1, idleAnimation2 ,constellation , skill }) {
+function Card({ id, name, type, rarity, picture, ultimateVideo, skillVideo,skillIcon ,ultIcon,idleAnimation1, idleAnimation2 ,constellation , skill , ult}) {
    const navigate = useNavigate();
 
    const handlePictureClick = () => {
-      navigate(`/card/${id}`, { state: { name, type, rarity, picture, ultimateVideo , skillVideo, skillIcon, ultIcon, idleAnimation1, idleAnimation2, constellation, skill  } });
+      navigate(`/card/${id}`, { state: { name, type, rarity, picture, ultimateVideo , skillVideo, skillIcon, ultIcon, idleAnimation1, idleAnimation2, constellation, skill, ult } });
    };
 
    const typeColors = {
