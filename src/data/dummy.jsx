@@ -71,10 +71,7 @@ export const caractersProfiles = [
       ult: {
          title: "Balemoon Rising",
          intro: "Arlecchino's great wing of Balemoon Bloodfire beats as she absorbs and clears Blood-Debt Directives around her. She deals AoE Pyro DMG before clearing the CD of All Is Ash and healing herself. The healing is based on her Bond of Life value and ATK.",
-         subTitle: "",
-         effects: [
-            ""
-         ],
+     
          italianDesc : "It is commonly believed throughout Teyvat that moon phases other than the full moon are mere metaphors of ill-omen, used only by those who practice alchemy and astrology.She saw this crimson moon in her dreams many times. Were those portents of disaster? Indeed they were, but the destined catastrophes belonged to those who enraged her."
    } },
    {
