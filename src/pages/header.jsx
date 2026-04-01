@@ -61,6 +61,7 @@ export default function Header() {
                   Home
                </Link>
             </li>
+
             <li>
                <Link 
                   to="/caracter" 
@@ -75,6 +76,23 @@ export default function Header() {
                   }}
                >
                   Characters
+               </Link>
+            </li>
+
+            <li>
+               <Link 
+                  to="/artefact" 
+                  style={linkStyle}
+                  onMouseEnter={(e) => {
+                     e.target.style.backgroundColor = '#34495e';
+                     e.target.style.transform = 'translateY(-2px)';
+                  }}
+                  onMouseLeave={(e) => {
+                     e.target.style.backgroundColor = 'transparent';
+                     e.target.style.transform = 'translateY(0)';
+                  }}
+               >
+                  Artefacts
                </Link>
             </li>
             
