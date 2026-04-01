@@ -7,12 +7,21 @@ This project is just a side past time funny one which purpose is to store and ma
 
 ### Character list and filter
 
-<img width="1366" height="603" alt="image" src="https://github.com/user-attachments/assets/4b139645-0f0d-4588-bde2-7f80d0577f5c" />
+<img width="1366" height="603" alt="image" src="https://github.com/user-attachments/assets/338e71f9-7bd4-4147-8a8d-6a372d834353" />
 
 
 ### Character details
 
-<img width="1354" height="595" alt="image" src="https://github.com/user-attachments/assets/7b3df774-2fd9-434c-bfd5-d303f8d57417" />
+<img width="1366" height="603" alt="image" src="https://github.com/user-attachments/assets/13878b15-26ce-4213-ae3a-6129b8b52d9a" />
+
+
+### Artefacts list and filter
+
+<img width="1366" height="603" alt="image" src="https://github.com/user-attachments/assets/f3cfd01b-c6f1-4d33-8fc1-524ac09b90a7" />
+
+### Artefact details
+
+<img width="1366" height="603" alt="image" src="https://github.com/user-attachments/assets/885ff9b8-97d0-4ed8-821b-436502304e18" />
 
 
 #### Features : 
