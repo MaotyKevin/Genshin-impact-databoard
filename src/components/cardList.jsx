@@ -51,6 +51,7 @@ export default function Caracter() {
 
             <img 
                src={elementIcons[element]} 
+               title={element}
                alt={element} 
                style={{ width: '30px', height: '30px' }} 
             />
