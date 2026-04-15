@@ -12,7 +12,7 @@ export default function CardDetails() {
    const {
       name,
       type,
-      //rarity,
+      rarity,
       picture,
       skill,
       ult,
@@ -158,6 +158,14 @@ const [currentIndex, setCurrentIndex] = useState(null);
             <p className="details-info">
                <strong>{name}</strong> | {type}
             </p>
+
+            {rarity && (
+               <div className="rarity-stars">
+                  {[...Array(Number(rarity))].map((_, index) => (
+                     <span key={index} className="star-icon">★</span>
+                  ))}
+               </div>
+            )}
 
             {/* Buttons */}
             <div className="button-group">

@@ -10,7 +10,7 @@ function Artefact({ id, name, domain, rarity, descri, appearance}) {
    };
 
    return (
-      <div style={{ display: 'flex', flexDirection: 'column', padding: 15 }}>
+      <div className="artefact-card">
          
          <img 
             src={appearance} 
