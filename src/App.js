@@ -7,6 +7,7 @@ const CharacterList = lazy(() => import('./features/characters/CharacterList'));
 const CharacterDetails = lazy(() => import('./features/characters/CharacterDetails'));
 const ArtifactList = lazy(() => import('./features/artifacts/ArtifactList'));
 const ArtifactDetails = lazy(() => import('./features/artifacts/ArtifactDetails'));
+const TeamBuilder = lazy(() => import('./features/teamBuilder/TeamBuilder'));
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/characters/:id" element={<CharacterDetails />} />
           <Route path="/artifacts" element={<ArtifactList />} />
           <Route path="/artifacts/:id" element={<ArtifactDetails />} />
+          <Route path="/team-builder" element={<TeamBuilder />} />
 
           {/* Backward-compatible aliases for existing links */}
           <Route path="/caracter" element={<Navigate to="/characters" replace />} />

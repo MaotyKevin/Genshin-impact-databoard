@@ -1,102 +1,81 @@
 import { Link } from "react-router-dom";
 
 export default function Header() {
-   const navStyle = {
-      display: 'flex',
-      justifyContent: 'space-between',
-      alignItems: 'center',
-      padding: '1rem 2rem',
-      backgroundColor: '#2c3e50',
-      boxShadow: '0 2px 4px rgba(0,0,0,0.1)',
-      position: 'sticky',
-      top: 0,
-      zIndex: 1000
-   };
+  const navStyle = {
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    padding: '1rem 2rem',
+    backgroundColor: '#2c3e50',
+    boxShadow: '0 2px 4px rgba(0,0,0,0.1)',
+    position: 'sticky',
+    top: 0,
+    zIndex: 1000
+  };
 
-   const brandStyle = {
-      fontSize: '1.5rem',
-      fontWeight: 'bold',
-      color: '#ecf0f1',
-      textDecoration: 'none',
-      letterSpacing: '1px'
-   };
+  const brandStyle = {
+    fontSize: '1.5rem',
+    fontWeight: 'bold',
+    color: '#ecf0f1',
+    textDecoration: 'none',
+    letterSpacing: '1px'
+  };
 
-   const navLinksStyle = {
-      display: 'flex',
-      gap: '2rem',
-      listStyle: 'none',
-      margin: 0,
-      padding: 0
-   };
+  const navLinksStyle = {
+    display: 'flex',
+    gap: '2rem',
+    listStyle: 'none',
+    margin: 0,
+    padding: 0
+  };
 
-   const linkStyle = {
-      color: '#ecf0f1',
-      textDecoration: 'none',
-      fontSize: '1.1rem',
-      fontWeight: '500',
-      padding: '0.5rem 1rem',
-      borderRadius: '4px',
-      transition: 'all 0.3s ease'
-   };
+  const linkStyle = {
+    color: '#ecf0f1',
+    textDecoration: 'none',
+    fontSize: '1.1rem',
+    fontWeight: '500',
+    padding: '0.5rem 1rem',
+    borderRadius: '4px',
+    transition: 'all 0.3s ease'
+  };
 
-   return (
-      <nav style={navStyle}>
-         <Link to="/" style={brandStyle}>
-            Maoty impact
-         </Link>
-         <ul style={navLinksStyle}>
-            <li>
-               <Link 
-                  to="/" 
-                  style={linkStyle}
-                  onMouseEnter={(e) => {
-                     e.target.style.backgroundColor = '#34495e';
-                     e.target.style.transform = 'translateY(-2px)';
-                  }}
-                  onMouseLeave={(e) => {
-                     e.target.style.backgroundColor = 'transparent';
-                     e.target.style.transform = 'translateY(0)';
-                  }}
-               >
-                  Home
-               </Link>
-            </li>
+  const handleEnter = (e) => {
+    e.currentTarget.style.backgroundColor = '#34495e';
+    e.currentTarget.style.transform = 'translateY(-2px)';
+  };
 
-            <li>
-               <Link 
-                  to="/characters" 
-                  style={linkStyle}
-                  onMouseEnter={(e) => {
-                     e.target.style.backgroundColor = '#34495e';
-                     e.target.style.transform = 'translateY(-2px)';
-                  }}
-                  onMouseLeave={(e) => {
-                     e.target.style.backgroundColor = 'transparent';
-                     e.target.style.transform = 'translateY(0)';
-                  }}
-               >
-                  Characters
-               </Link>
-            </li>
+  const handleLeave = (e) => {
+    e.currentTarget.style.backgroundColor = 'transparent';
+    e.currentTarget.style.transform = 'translateY(0)';
+  };
 
-            <li>
-               <Link 
-                  to="/artifacts" 
-                  style={linkStyle}
-                  onMouseEnter={(e) => {
-                     e.target.style.backgroundColor = '#34495e';
-                     e.target.style.transform = 'translateY(-2px)';
-                  }}
-                  onMouseLeave={(e) => {
-                     e.target.style.backgroundColor = 'transparent';
-                     e.target.style.transform = 'translateY(0)';
-                  }}
-               >
-                  Artifacts
-               </Link>
-            </li>
-            
-         </ul>
-      </nav>
-   )
+  return (
+    <nav style={navStyle}>
+      <Link to="/" style={brandStyle}>
+        Maoty impact
+      </Link>
+      <ul style={navLinksStyle}>
+        <li>
+          <Link to="/" style={linkStyle} onMouseEnter={handleEnter} onMouseLeave={handleLeave}>
+            Home
+          </Link>
+        </li>
+        <li>
+          <Link to="/characters" style={linkStyle} onMouseEnter={handleEnter} onMouseLeave={handleLeave}>
+            Characters
+          </Link>
+        </li>
+        <li>
+          <Link to="/artifacts" style={linkStyle} onMouseEnter={handleEnter} onMouseLeave={handleLeave}>
+            Artifacts
+          </Link>
+        </li>
+        <li>
+          <Link to="/team-builder" style={linkStyle} onMouseEnter={handleEnter} onMouseLeave={handleLeave}>
+            Team Builder
+          </Link>
+        </li>
+      </ul>
+    </nav>
+  );
 }
