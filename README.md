@@ -1,18 +1,3 @@
----
-title: Genshin Impact Databoard
-description: Fan-made Genshin Impact character, artifact, and team planning databoard
-author: Maoty
-ms.date: 2026-11-25
-ms.topic: overview
-keywords:
-  - genshin impact
-  - characters
-  - artifacts
-  - team builder
-  - game data
-estimated_reading_time: 3
----
-
 ## Yōkoso, tabibitoyo
 
 ![Genshin Impact Databoard preview](https://github.com/user-attachments/assets/cd304b50-a70a-401e-a99e-df498ed27d0b)
