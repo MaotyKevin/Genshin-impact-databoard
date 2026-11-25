@@ -9,7 +9,7 @@
   width: fit-content;
 }
 
-.artefact-card {
+.artifact-card {
   display: flex;
   flex-direction: column;
   padding: 15px;

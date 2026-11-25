@@ -1,7 +1,7 @@
 //import { useNavigate } from 'react-router-dom';
 import { useNavigate } from "react-router-dom";
 
-function Card({ id, name, type, rarity, picture, ultimateVideo, skillVideo, skillIcon, ultIcon, idleAnimation1, idleAnimation2, constellation, skill, ult }) {
+function CharacterCard({ id, name, type, rarity, picture, ultimateVideo, skillVideo, skillIcon, ultIcon, idleAnimation1, idleAnimation2, constellation, skill, ult }) {
    const navigate = useNavigate();
 
    const handlePictureClick = () => {
@@ -44,4 +44,4 @@ function Card({ id, name, type, rarity, picture, ultimateVideo, skillVideo, skil
    );
 }
 
-export default Card;
+export default CharacterCard;

@@ -4,7 +4,7 @@ const paleFlame = 'https://wiki.hoyolab.com/_ipx/f_webp/https://bbs.hoyolab.com/
 
 
 
-export const artefactsProfiles = [
+export const artifacts = [
    {
       id: 1,
       name: 'Gladiator\'s Finale',
