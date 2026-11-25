@@ -10,10 +10,6 @@ This project is a side project for storing and organizing Genshin Impact charact
 
 ![Character list and filter](https://github.com/user-attachments/assets/338e71f9-7bd4-4147-8a8d-6a372d834353)
 
-### Character details
-
-![Character details](https://github.com/user-attachments/assets/13878b15-26ce-4213-ae3a-621e8b9b5d9b)
-
 ### Artifact list and filter
 
 ![Artifact list and filter](https://github.com/user-attachments/assets/f3cfd01b-c6f1-4d33-8fc1-524ac09b90a7)
@@ -25,6 +21,8 @@ This project is a side project for storing and organizing Genshin Impact charact
 ### Team Builder and Synergy Checker
 
 The Team Builder lets you assemble a 4-character party and immediately evaluate how the lineup may perform.
+
+![Team Builder and Synergy Checker](https://github.com/user-attachments/assets/09f6c14b-6134-4dd4-b5c3-32d3a7d2130d)
 
 The builder includes:
 
