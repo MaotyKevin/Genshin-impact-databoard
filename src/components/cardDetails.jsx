@@ -1,29 +1,18 @@
 import React, { useState, useEffect, useMemo } from 'react';
-//import { useParams, useLocation, useNavigate } from 'react-router-dom';
-import { useParams, useLocation, useNavigate } from "react-router";
+import { useParams, useNavigate } from "react-router-dom";
+import { caractersProfiles } from '../data/dummy';
 
 import "../css/cardDetails.css";
 
 export default function CardDetails() {
    const { id } = useParams();
-   const location = useLocation();
    const navigate = useNavigate();
+   const character = caractersProfiles.find((profile) => String(profile.id) === String(id));
 
    const {
-      name,
-      type,
-      rarity,
-      picture,
-      skill,
-      ult,
-      skillVideo,
-      skillIcon,
-      ultIcon,
-      ultimateVideo,
-      constellation,
-      idleAnimation1,
-      idleAnimation2
-   } = location.state || {};
+      name = 'Unknown character', type = '', rarity = '', picture = '', skill = {}, ult = {}, skillVideo = '', skillIcon = '',
+      ultIcon = '', ultimateVideo = '', constellation = '', idleAnimation1 = '', idleAnimation2 = ''
+   } = character || {};
 
 const [activeTab, setActiveTab] = useState('idle1');
 const [currentIndex, setCurrentIndex] = useState(null);
@@ -78,10 +67,11 @@ const [currentIndex, setCurrentIndex] = useState(null);
       }
    }, [activeTab, currentIndex, controls]);
 
-   if (!id) {
+   if (!character) {
       return (
          <div className="details-container">
-            <h1>Card not found</h1>
+            <h1>Character not found</h1>
+            <button className="details-button" onClick={() => navigate('/characters')}>Back to characters</button>
          </div>
       );
    }

@@ -1,11 +1,11 @@
 //import { useNavigate } from 'react-router-dom';
-import { useNavigate } from "react-router";
+import { useNavigate } from "react-router-dom";
 
-function Card({ id, name, type, rarity, picture, ultimateVideo, skillVideo,skillIcon ,ultIcon,idleAnimation1, idleAnimation2 ,constellation , skill , ult}) {
+function Card({ id, name, type, rarity, picture, ultimateVideo, skillVideo, skillIcon, ultIcon, idleAnimation1, idleAnimation2, constellation, skill, ult }) {
    const navigate = useNavigate();
 
    const handlePictureClick = () => {
-      navigate(`/card/${id}`, { state: { name, type, rarity, picture, ultimateVideo , skillVideo, skillIcon, ultIcon, idleAnimation1, idleAnimation2, constellation, skill, ult } });
+      navigate(`/characters/${id}`);
    };
 
    const typeColors = {
@@ -35,20 +35,13 @@ function Card({ id, name, type, rarity, picture, ultimateVideo, skillVideo,skill
 
    return (
       <div style={{ display: 'flex', flexDirection: 'column', padding: 15 }}>
-         
-         <img 
-            src={picture} 
-            alt="freelancer" 
-            height={80} 
-            width={80} 
-            onClick={handlePictureClick}
-            style={{ cursor: 'pointer' }}
-         /><br/>
-
+         <button type="button" onClick={handlePictureClick} aria-label={`View ${name}`} style={{ border: 0, background: 'transparent', cursor: 'pointer' }}>
+            <img src={picture} alt={`${name} character portrait`} width={80} height={80} loading="lazy" decoding="async" />
+         </button>
          <span style={nameStyle}>{name}</span>
 
       </div>
    );
 }
 
-export default Card
+export default Card;

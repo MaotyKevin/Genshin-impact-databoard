@@ -71,9 +71,9 @@ export default function ArtefactList() {
          </div>
 
          <div className="caracter-grid">
-            {filteredArtefact.map((profile, index) => (
+            {filteredArtefact.map((profile) => (
                <Artefact
-                  key={`${profile.id}-${index}`}
+                  key={profile.id}
                   id={profile.id}
                   name={profile.name}
                   domain={profile.domain}
