@@ -1,24 +1,32 @@
-//import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { BrowserRouter, Routes, Route } from "react-router";
-import Home from './pages/home';
+import { lazy, Suspense } from 'react';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import Header from './pages/header';
-import Caracter from './components/cardList';
-import CardDetails from './components/cardDetails';
-import ArtefactList from './components/artefactList';
-import ArtefactDetails from './components/artefactDetails';
+
+const Home = lazy(() => import('./pages/home'));
+const CharacterList = lazy(() => import('./components/cardList'));
+const CharacterDetails = lazy(() => import('./components/cardDetails'));
+const ArtifactList = lazy(() => import('./components/artefactList'));
+const ArtifactDetails = lazy(() => import('./components/artefactDetails'));
 
 function App() {
   return (
     <BrowserRouter>
-    <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path='/caracter' element={<Caracter />} />
-        <Route path='/artefact' element={<ArtefactList />} />
-        <Route path='/card/:id' element={<CardDetails />} />
-        <Route path='/artefact/:id' element={<ArtefactDetails />} />
-      </Routes>
-      
+      <Header />
+      <Suspense fallback={<div className="loading-state">Loading...</div>}>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/characters" element={<CharacterList />} />
+          <Route path="/characters/:id" element={<CharacterDetails />} />
+          <Route path="/artifacts" element={<ArtifactList />} />
+          <Route path="/artifacts/:id" element={<ArtifactDetails />} />
+
+          {/* Backward-compatible aliases for existing links */}
+          <Route path="/caracter" element={<Navigate to="/characters" replace />} />
+          <Route path="/artefact" element={<Navigate to="/artifacts" replace />} />
+          <Route path="/card/:id" element={<CharacterDetails />} />
+          <Route path="/artefact/:id" element={<ArtifactDetails />} />
+        </Routes>
+      </Suspense>
     </BrowserRouter>
   );
 }

@@ -61,9 +61,9 @@ export default function Caracter() {
          </div>
 
          <div className="caracter-grid">
-            {filteredCharacters.map((profile, index) => (
+            {filteredCharacters.map((profile) => (
                <Card
-                  key={`${profile.id}-${index}`}
+                  key={profile.id}
                   id={profile.id}
                   name={profile.name}
                   picture={profile.picture}

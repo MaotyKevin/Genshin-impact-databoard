@@ -1,5 +1,5 @@
-//import { Link } from 'react-router-dom'
-import { Link } from "react-router";
+import { Link } from "react-router-dom";
+
 export default function Header() {
    const navStyle = {
       display: 'flex',
@@ -64,7 +64,7 @@ export default function Header() {
 
             <li>
                <Link 
-                  to="/caracter" 
+                  to="/characters" 
                   style={linkStyle}
                   onMouseEnter={(e) => {
                      e.target.style.backgroundColor = '#34495e';
@@ -81,7 +81,7 @@ export default function Header() {
 
             <li>
                <Link 
-                  to="/artefact" 
+                  to="/artifacts" 
                   style={linkStyle}
                   onMouseEnter={(e) => {
                      e.target.style.backgroundColor = '#34495e';

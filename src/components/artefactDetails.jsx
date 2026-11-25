@@ -1,68 +1,39 @@
-import { useParams, useLocation, useNavigate } from "react-router";
+import { useParams, useNavigate } from "react-router-dom";
+import { artefactsProfiles } from '../data/sets';
 
 import "../css/cardDetails.css";
 
 export default function ArtefactDetails() {
    const { id } = useParams();
-   const location = useLocation();
    const navigate = useNavigate();
+   const artefact = artefactsProfiles.find((profile) => String(profile.id) === String(id));
 
-const {
-      name,
-      domain,
-      rarity,
-      descri,
-      appearance
-   } = location.state || {};
-
-
-   if (!id) {
+   if (!artefact) {
       return (
          <div className="details-container">
-            <h1>Card not found</h1>
+            <h1>Artifact not found</h1>
+            <button className="details-button" onClick={() => navigate('/artifacts')}>Back to artifacts</button>
          </div>
       );
    }
 
+   const { name, domain, rarity, descri, appearance } = artefact;
+
    return (
-        <div className="details-container">
-         <div
-            className="details-card">
-           
+      <div className="details-container">
+         <div className="details-card">
             <h1 className="details-title">#{id}</h1>
-            <img src={appearance} alt={name} className="details-image" />
-            <p className="details-info">
-               <strong>{name}</strong> | {domain} | {rarity} Stars
-            </p>
-            
+            <img src={appearance} alt={`${name} artifact set`} className="details-image" loading="lazy" decoding="async" />
+            <p className="details-info"><strong>{name}</strong> | {domain} | {rarity} Stars</p>
             <ul className="details-list">
-               
-                 <li className="details-description">2 pieces : {descri[2]}</li><br/>
-
-            <li className="details-description">4 pieces : {descri[4]}</li>
-
+               <li className="details-description">2 pieces : {descri[2]}</li><br />
+               <li className="details-description">4 pieces : {descri[4]}</li>
             </ul>
-
-
-            {/* Buttons */}
             <div className="button-group">
-               <button
-                  className="details-button"
-                  onClick={() => navigate(-1)}
-               >
-                  Return
-               </button>
-               <button
-                  className="details-button"
-                  onClick={() => navigate('/')}
-               >
-                  Home
-               </button>
+               <button className="details-button" onClick={() => navigate(-1)}>Return</button>
+               <button className="details-button" onClick={() => navigate('/')}>Home</button>
             </div>
-
          </div>
-
-        
       </div>
    );
 }
