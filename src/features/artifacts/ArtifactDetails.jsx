@@ -1,14 +1,14 @@
 import { useParams, useNavigate } from "react-router-dom";
-import { artefactsProfiles } from '../data/sets';
+import { artifacts } from './artifacts';
 
-import "../css/cardDetails.css";
+import "../../css/cardDetails.css";
 
-export default function ArtefactDetails() {
+export default function ArtifactDetails() {
    const { id } = useParams();
    const navigate = useNavigate();
-   const artefact = artefactsProfiles.find((profile) => String(profile.id) === String(id));
+   const artifact = artifacts.find((profile) => String(profile.id) === String(id));
 
-   if (!artefact) {
+   if (!artifact) {
       return (
          <div className="details-container">
             <h1>Artifact not found</h1>
@@ -17,7 +17,7 @@ export default function ArtefactDetails() {
       );
    }
 
-   const { name, domain, rarity, descri, appearance } = artefact;
+   const { name, domain, rarity, descri, appearance } = artifact;
 
    return (
       <div className="details-container">

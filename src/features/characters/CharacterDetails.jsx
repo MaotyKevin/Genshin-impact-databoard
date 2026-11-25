@@ -1,13 +1,13 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { useParams, useNavigate } from "react-router-dom";
-import { caractersProfiles } from '../data/dummy';
+import { characters } from './characters';
 
-import "../css/cardDetails.css";
+import "../../css/cardDetails.css";
 
-export default function CardDetails() {
+export default function CharacterDetails() {
    const { id } = useParams();
    const navigate = useNavigate();
-   const character = caractersProfiles.find((profile) => String(profile.id) === String(id));
+   const character = characters.find((profile) => String(profile.id) === String(id));
 
    const {
       name = 'Unknown character', type = '', rarity = '', picture = '', skill = {}, ult = {}, skillVideo = '', skillIcon = '',

@@ -92,7 +92,7 @@ export default function Header() {
                      e.target.style.transform = 'translateY(0)';
                   }}
                >
-                  Artefacts
+                  Artifacts
                </Link>
             </li>
             

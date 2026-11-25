@@ -3,10 +3,10 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import Header from './pages/header';
 
 const Home = lazy(() => import('./pages/home'));
-const CharacterList = lazy(() => import('./components/cardList'));
-const CharacterDetails = lazy(() => import('./components/cardDetails'));
-const ArtifactList = lazy(() => import('./components/artefactList'));
-const ArtifactDetails = lazy(() => import('./components/artefactDetails'));
+const CharacterList = lazy(() => import('./features/characters/CharacterList'));
+const CharacterDetails = lazy(() => import('./features/characters/CharacterDetails'));
+const ArtifactList = lazy(() => import('./features/artifacts/ArtifactList'));
+const ArtifactDetails = lazy(() => import('./features/artifacts/ArtifactDetails'));
 
 function App() {
   return (

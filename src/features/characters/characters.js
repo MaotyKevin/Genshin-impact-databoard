@@ -1,22 +1,22 @@
-import arlecchino from '../assets/Arlecchino_Icon.webp'
-import neuvillette from '../assets/Neuvillette_Icon.webp'
-import benett from '../assets/Bennett_Icon.webp'
+import arlecchino from '../../assets/Arlecchino_Icon.webp'
+import neuvillette from '../../assets/Neuvillette_Icon.webp'
+import benett from '../../assets/Bennett_Icon.webp'
 
-import arlecchinoUltIcon from '../assets/Talent_Balemoon_Rising.webp'
-import arlecchinoSkillIcon from '../assets/Talent_All_Is_Ash.webp'
-
-
-import neuvilletteUltIcon from '../assets/Talent_O_Tides,_I_Have_Returned.webp'
-import neuvilletteSkillIcon from '../assets/Talent_O_Tears,_I_Shall_Repay.webp'
+import arlecchinoUltIcon from '../../assets/Talent_Balemoon_Rising.webp'
+import arlecchinoSkillIcon from '../../assets/Talent_All_Is_Ash.webp'
 
 
-import benettUltIcon from '../assets/Talent_Fantastic_Voyage.webp'
-import benettSkillIcon from '../assets/Talent_Passion_Overload.webp'
+import neuvilletteUltIcon from '../../assets/Talent_O_Tides,_I_Have_Returned.webp'
+import neuvilletteSkillIcon from '../../assets/Talent_O_Tears,_I_Shall_Repay.webp'
+
+
+import benettUltIcon from '../../assets/Talent_Fantastic_Voyage.webp'
+import benettSkillIcon from '../../assets/Talent_Passion_Overload.webp'
 
 
 
-import zibaiUltIcon from '../assets/Talent_Tri-Sphere_Eminence.webp'
-import zibaiSkillIcon from '../assets/Talent_Heaven_and_Earth_Made_Manifest.webp'
+import zibaiUltIcon from '../../assets/Talent_Tri-Sphere_Eminence.webp'
+import zibaiSkillIcon from '../../assets/Talent_Heaven_and_Earth_Made_Manifest.webp'
 
 
 const arlecchinoIdle1 = 'https://act-upload.hoyoverse.com/event-ugc-hoyowiki/2024/04/30/35428890/2ab72b0e0036fc4b2868a0ec92afd300_1213585275251057431.gif'
@@ -45,7 +45,7 @@ const zibaiIdle2 = 'https://act-webstatic.hoyoverse.com/event-static-hoyowiki-ad
 const zibaiConstellation = 'https://act-upload.hoyoverse.com/event-ugc-hoyowiki/2026/02/24/35428890/a4c11d7ce203e9b0452892de70aef5e0_7398538137425799973.png?x-oss-process=image%2Fformat%2Cwebp'
 
 
-export const caractersProfiles = [
+export const characters = [
    {
     id: 1,
       name: 'arlecchino',
